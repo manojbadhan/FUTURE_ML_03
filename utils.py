@@ -1,10 +1,11 @@
+import re
 import nltk
 from nltk.corpus import stopwords
 
-# Download stopwords if not present
+# Ensure stopwords are available
 try:
     stop_words = set(stopwords.words('english'))
-except LookupError:
+except:
     nltk.download('stopwords')
     stop_words = set(stopwords.words('english'))
 
